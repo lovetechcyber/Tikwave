@@ -4,8 +4,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 // Pages
 import HomePage from "./pages/HomePage";
-import AuthPage from "./pages/LoginPage";
-import SignupPage from "./pages/SignupPage";
+import AuthPage from "./pages/AuthPage";
 import Dashboard from "./pages/Dashboard";
 
 // Context Providers

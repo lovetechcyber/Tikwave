@@ -4,10 +4,9 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 // Pages
 import HomePage from "./pages/HomePage";
-import LoginPage from "./pages/LoginPage";
+import AuthPage from "./pages/LoginPage";
 import SignupPage from "./pages/SignupPage";
-import DashboardPage from "./pages/DashboardPage";
-import TransactionPage from "./pages/TransactionPage";
+import Dashboard from "./pages/Dashboard";
 
 // Context Providers
 import { AuthProvider } from "./context/AuthContext";
@@ -23,26 +22,19 @@ function App() {
         <Router>
           <Routes>
             <Route path="/" element={<HomePage />} />
-            <Route path="/login" element={<LoginPage />} />
-            <Route path="/signup" element={<SignupPage />} />
+            <Route path="/login" element={<AuthPage />} />
+            <Route path="/signup" element={<AuthPage />} />
             
             {/* Protected Routes */}
             <Route
               path="/dashboard"
               element={
                 <ProtectedRoute>
-                  <DashboardPage />
+                  <Dashboard />
                 </ProtectedRoute>
               }
             />
-            <Route
-              path="/transactions"
-              element={
-                <ProtectedRoute>
-                  <TransactionPage />
-                </ProtectedRoute>
-              }
-            />
+            
           </Routes>
         </Router>
       </AuthProvider>

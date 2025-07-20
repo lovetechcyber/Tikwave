@@ -6,7 +6,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import HomePage from "./pages/HomePage";
 import AuthPage from "./pages/LoginPage";
 import SignupPage from "./pages/SignupPage";
-import DashboardPage from "./pages/DashboardPage";
+import Dashboard from "./pages/Dashboard";
 
 // Context Providers
 import { AuthProvider } from "./context/AuthContext";

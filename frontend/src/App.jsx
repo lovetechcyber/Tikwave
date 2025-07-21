@@ -5,7 +5,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 // Pages
 import HomePage from "./pages/HomePage";
 import AuthPage from "./pages/AuthPage";
-import Dashboard from "./pages/Dashboard";
+
 
 // Context Providers
 import { AuthProvider } from "./context/AuthContext";
@@ -25,14 +25,14 @@ function App() {
             <Route path="/signup" element={<AuthPage />} />
             
             {/* Protected Routes */}
-            <Route
-              path="/dashboard"
-              element={
-                <ProtectedRoute>
-                  <Dashboard />
-                </ProtectedRoute>
-              }
-            />
+
+
+
+
+
+
+
+
             
           </Routes>
         </Router>

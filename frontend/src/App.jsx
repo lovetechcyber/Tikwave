@@ -1,6 +1,6 @@
 
 import React from "react";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 
 // Pages
 import HomePage from "./pages/HomePage";
@@ -22,20 +22,8 @@ function App() {
           <Routes>
             <Route path="/" element={<HomePage />} />
             <Route path="/login" element={<AuthPage />} />
-            <Route path="/signup" element={<AuthPage />} />
-            
-            {/* Protected Routes */}
-
-
-
-
-
-
-
-
-            
+            <Route path="/signup" element={<AuthPage />} /> 
           </Routes>
-        </Router>
       </AuthProvider>
     </LanguageProvider>
   );

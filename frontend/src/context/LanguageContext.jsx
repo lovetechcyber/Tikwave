@@ -1,13 +1,11 @@
-import { createContext, useState } from "react";
+import { createContext, useContext, useState } from "react";
 
-export const LanguageContext = createContext();
+const LanguageContext = createContext();
 
 export const LanguageProvider = ({ children }) => {
-  const [language, setLanguage] = useState(localStorage.getItem("lang") || "en");
-  const changeLanguage = (lang) => {
-    localStorage.setItem("lang", lang);
-    setLanguage(lang);
-  };
+  const [language, setLanguage] = useState("en");
+
+  const changeLanguage = (lang) => setLanguage(lang);
 
   return (
     <LanguageContext.Provider value={{ language, changeLanguage }}>
@@ -15,3 +13,7 @@ export const LanguageProvider = ({ children }) => {
     </LanguageContext.Provider>
   );
 };
+
+
+// eslint-disable-next-line react-refresh/only-export-components
+export const useLanguage = () => useContext(LanguageContext);
